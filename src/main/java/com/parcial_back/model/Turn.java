@@ -5,7 +5,7 @@ public class Turn {
     private int id;
     private String status;
 
-    public Turn(int id, String status, String user) {
+    public Turn(int id, String status) {
         this.id = id;
         this.status = status;
     }

@@ -15,9 +15,14 @@ public class TurnPersistence {
         Turns.put(id, turn);
     }
 
-    public Turn getTurn(Integer id){
-        Turn turn = Turns.get(id);
-        return turn;
+    public Turn getLastCreatedTurn(){
+        return Turns.values().stream()
+                .filter(turn -> turn.getStatus().equals("CREATED"))
+                .findFirst()
+                .orElse(null);
     }
 
+    public Integer getTurnCount(){
+        return Turns.size();
+    }
 }

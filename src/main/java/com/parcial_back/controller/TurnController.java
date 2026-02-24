@@ -3,6 +3,7 @@ package com.parcial_back.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.parcial_back.model.Turn;
 import com.parcial_back.service.TurnService;
 
 
@@ -17,12 +18,12 @@ public class TurnController {
     }
 
     @GetMapping("/ticket")
-    public ResponseEntity<String> getTicket(){
+    public ResponseEntity<Turn> getTicket(){
         return(ResponseEntity.ok(turnService.getTicket()));
     }
 
     @GetMapping("/check/ticket")
-    public ResponseEntity<String> checkTicket(){
+    public ResponseEntity<Turn> checkTicket(){
         return(ResponseEntity.ok(turnService.checkTicket()));
     }
 
