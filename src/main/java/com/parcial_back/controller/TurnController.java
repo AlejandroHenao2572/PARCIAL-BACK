@@ -9,6 +9,7 @@ import com.parcial_back.service.TurnService;
 
 @RestController
 @RequestMapping("/api/turn")
+@CrossOrigin(origins = "*")
 public class TurnController {
 
     private final TurnService turnService;
