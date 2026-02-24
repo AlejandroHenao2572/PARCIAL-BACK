@@ -26,5 +26,4 @@ public class TurnController {
     public ResponseEntity<Turn> checkTicket(){
         return(ResponseEntity.ok(turnService.checkTicket()));
     }
-
 }

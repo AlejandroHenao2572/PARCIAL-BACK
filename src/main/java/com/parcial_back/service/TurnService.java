@@ -14,19 +14,19 @@ public class TurnService {
         this.turnPersistence = turnPersistence;
     }
 
-    public Turn getTicket() {
+    public synchronized Turn getTicket() {
         Turn nuevoTurn = new Turn(generateTurnId(), "CREATED");
         turnPersistence.saveTurn(nuevoTurn.getId(), nuevoTurn);
         return nuevoTurn;
     }
 
-    public Turn checkTicket() {
+    public synchronized Turn checkTicket() {
         Turn lastTurn = turnPersistence.getLastCreatedTurn();
         if (lastTurn == null) {
             return null; 
         }
         if (lastTurn.getStatus().equals("CREATED")) {
-            lastTurn.setStatus("CHECKED");
+            lastTurn.setStatus("CALLED");
             turnPersistence.saveTurn(lastTurn.getId(), lastTurn);
         }
         return lastTurn;
