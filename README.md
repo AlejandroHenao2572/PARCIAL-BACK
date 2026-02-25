@@ -1,7 +1,6 @@
 ## Parcial ARSW BACK
 
 - David Alejandro Patacon Henao
-
 -  cliente concurrente:  https://github.com/AlejandroHenao2572/ConcurrentClient.git
 -  cliente react:   https://github.com/AlejandroHenao2572/cliente-react.git
 
@@ -200,3 +199,4 @@ public class Turn {
 ```
 
 - Clase de dominio basica para representar un ticket con id y estado(CREATED O CALLED)
+
