@@ -3,6 +3,7 @@
 - David Alejandro Patacon Henao
 -  cliente concurrente:  https://github.com/AlejandroHenao2572/ConcurrentClient.git
 -  cliente react:   https://github.com/AlejandroHenao2572/cliente-react.git
+- video: https://youtu.be/ev7E94qFxRc
 
 ## Arquitectura 
 ![alt text](img/image.png)
